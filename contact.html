@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contact - CampusBites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page-contact">
+    <div id="top-bar">
+      <div class="logo">CampusBites</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-shell">
+
+    <h1>Contact CampusBites</h1>
+
+    <section class="hero-panel">
+      <p>
+        For any students or faculty interested in learning more about
+        CampusBites or food options on campus, please reach out to us using the
+        form below. We look forward to hearing from you and helping you find
+        the best bites on campus.
+      </p>
+    </section>
+
+    <div class="contact-grid">
+      <form class="home-form">
+        <p>
+          <label>
+            Your name:
+            <input type="text" name="name" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Company:
+            <input type="text" name="company" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Student email:
+            <input type="email" name="email" />
+          </label>
+        </p>
+        <p>
+          <label>
+            Message:
+            <textarea name="message" rows="5"></textarea>
+          </label>
+        </p>
+        <p>
+          <button type="submit">Send message to CampusBites</button>
+        </p>
+      </form>
+
+      <div class="page-image page-image--contact">
+        <img
+          src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&fit=crop&w=1200&q=80"
+          alt="Professional food truck service setup for campus catering"
+        />
+      </div>
+    </div>
+
+    </main>
+
+    <p id="footer-text">
+      © 2026 CampusBites. Helping students find the best bites on campus.
+    </p>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
+</html>

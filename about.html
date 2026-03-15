@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>About - CampusBites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page-about">
+    <div id="top-bar">
+      <div class="logo">CampusBites</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-shell">
+
+    <h1>About CampusBites</h1>
+
+    <section class="hero-panel">
+      <p>
+        Here at CampusBites, we are dedicated to helping students discover and
+        enjoy the best food options on their campus. We understand that finding
+        delicious and convenient meals can be a challenge for busy students,
+        which is why we created a platform that connects them with local food
+        vendors and provides real-time updates on menu offerings and promotions.
+      </p>
+    </section>
+
+    <p>
+      We accomplish this by partnering with a wide range of food vendors on campus, from popular chains to local favorites. Our platform 
+      allows students to easily browse menus, place orders, and receive notifications about special deals and discounts. We are 
+      committed to providing a seamless and enjoyable food ordering experience for students, while also supporting local businesses 
+      on campus.
+    </p>
+
+    <h2>CampusBites story</h2>
+
+    <p>
+      CampusBites was founded by students who were passionate about food and wanted to make it easier for their peers to access delicious meals on campus. 
+      We started as a small project during a hackathon, and quickly realized the potential to create a platform that could benefit students and local 
+      food vendors alike. Since then, we have been working tirelessly to develop and improve our platform, and we are proud to say that we have 
+      helped thousands of students discover new food options and support local businesses on their campus.
+    </p>
+
+    </main>
+
+    <p id="footer-text">
+      © 2026 CampusBites. Helping students find the best bites on campus.
+    </p>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Profile - CampusBites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page-profile">
+    <div id="top-bar">
+      <div class="logo">CampusBites</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-shell">
+
+    <h1>CampusBites Profile</h1>
+
+    <section class="hero-panel">
+      <p>
+        CampusBites is a student-focused food truck discovery and catering
+        platform built to support fast campus life in Tokyo. We connect the TUJ
+        community and nearby international universities with trusted food truck
+        partners that deliver quality, consistency, and variety.
+      </p>
+    </section>
+
+    <h2>What We Focus On</h2>
+    <ul class="profile-highlights">
+      <li>Reliable weekly truck scheduling for class-hour convenience.</li>
+      <li>Affordable meal options designed for student budgets.</li>
+      <li>Easy event catering coordination for clubs and departments.</li>
+      <li>Strong partnerships with local vendors and campus organizations.</li>
+    </ul>
+
+    <h2>Mission</h2>
+    <p>
+      Our mission is to make campus dining easier to discover, easier to enjoy,
+      and more community-driven. By combining local food culture with campus
+      convenience, CampusBites helps students spend less time searching and
+      more time enjoying great meals.
+    </p>
+
+    </main>
+
+    <p id="footer-text">
+      © 2026 CampusBites. Helping students find the best bites on campus.
+    </p>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
+</html>

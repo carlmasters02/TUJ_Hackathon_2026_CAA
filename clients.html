@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Clients - CampusBites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page-clients">
+    <div id="top-bar">
+      <div class="logo">CampusBites</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-shell">
+
+    <h1>CampusBites Partnered Universities</h1>
+
+    <section class="hero-panel">
+      <p>
+        CampusBites partners with Temple University Japan and other foreign
+        universities located in Tokyo to improve access to convenient,
+        high-quality food options for students, faculty, and campus events.
+      </p>
+    </section>
+
+    <h2>Selected client examples</h2>
+    <p>
+      Our university partners represent diverse international student
+      communities, and we tailor each food truck schedule to match class hours,
+      campus events, and local preferences.
+    </p>
+
+
+    <section class="partners">
+
+      <h2>Our Partner Universities</h2>
+
+      <div class="partner-grid">
+        <article class="partner-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/2/2f/Temple_University_logo.svg"
+            alt="Temple University Japan logo"
+          />
+          <h3>Temple University Japan</h3>
+          <p>Core partner for recurring student events and campus lunch service.</p>
+        </article>
+
+        <article class="partner-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/a/a3/Sophia_University_logo.svg"
+            alt="Sophia University logo"
+          />
+          <h3>Sophia University</h3>
+          <p>International-campus food truck rotations for student communities.</p>
+        </article>
+
+        <article class="partner-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/5/5e/International_Christian_University_logo.svg"
+            alt="International Christian University logo"
+          />
+          <h3>International Christian University</h3>
+          <p>Flexible catering support for cross-cultural campus programs.</p>
+        </article>
+      </div>
+
+    </section>
+
+  
+
+
+    <h2>Short testimonials</h2>
+    <p class="quote-panel">
+      "CampusBites has helped us offer reliable food truck service at TUJ during
+      our busiest student hours. The process is smooth, flexible, and easy to
+      coordinate."
+    </p>
+
+    <p class="quote-panel">
+      "Their partnerships with Tokyo-based international universities make a real
+      difference for students who need quick, affordable, and familiar meal
+      choices between classes."
+    </p>
+
+    </main>
+
+    <p id="footer-text">
+      © 2026 CampusBites. Helping students find the best bites on campus.
+    </p>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+</body>
+</html>

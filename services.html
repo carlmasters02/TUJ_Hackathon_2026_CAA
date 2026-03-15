@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Services - CampusBites</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body class="page-services">
+    <div id="top-bar">
+      <div class="logo">CampusBites</div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Schedule/Services</a></li>
+        <li><a href="clients.html">Partnered Universities</a></li>
+        <li><a href="contact.html">Contact Form</a></li>
+        <li><a href="blank.html">Menu</a></li>
+        <li class="dark-mode-toggle">
+          <label class="switch">
+            <input id="dark-mode-toggle" type="checkbox" />
+            <span class="slider"></span>
+          </label>
+        </li>
+      </ul>
+    </div>
+
+    <main class="page-shell">
+
+    <h1>CampusBites Schedule/Services</h1>
+
+    <section class="hero-panel">
+      <p>
+        CampusBites proudly features three favorite food trucks that have been
+        catering to Temple University Japan students, faculty, and campus
+        events. From quick between-class bites to full lunch service, our
+        partner trucks bring reliable schedules, fresh ingredients, and
+        student-friendly prices right to TUJ.
+      </p>
+    </section>
+
+    <h2>Sakura Street Grill</h2>
+    <p>
+      Sakura Street Grill is known across Temple University Japan for hot rice
+      bowls, teriyaki wraps, and comfort food made fast. Their team regularly
+      caters student organization events and weekday lunch rushes with quick
+      service and consistent quality.
+    </p>
+
+    <h3>Tokyo Taco Truck</h3>
+    <p>
+      Tokyo Taco Truck brings a Japanese-Mexican fusion menu to TUJ, including
+      loaded tacos, spicy chicken burritos, and vegetarian options that sell
+      out fast. They are a top pick for evening programs and club socials.
+    </p>
+
+    <h3>Noodle Lane Express</h3>
+    <p>
+      Noodle Lane Express serves fresh ramen cups, udon bowls, and seasonal
+      specials tailored for busy TUJ schedules. Their catering setup is ideal
+      for open campus days, guest lectures, and department gatherings.
+    </p>
+
+    <h2>Weekly TUJ Catering Support</h2>
+    <p>
+      Together, these three food trucks help CampusBites deliver dependable
+      weekly catering for Temple University Japan, with flexible menus for
+      dietary preferences and event sizes. Book through CampusBites to bring
+      trusted campus favorites to your next TUJ event.
+    </p>
+
+    <div class="page-image page-image--services">
+      <img
+        src="https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?auto=format&fit=crop&w=1400&q=80"
+        alt="Food truck serving customers in an urban campus setting"
+      />
+    </div>
+
+    <ul class="weird-list">
+      <li>Sakura Street Grill: Rice bowls, wraps, and crowd-friendly combos.</li>
+      <li>Tokyo Taco Truck: Fusion tacos, burritos, and late-day catering.</li>
+      <li>Noodle Lane Express: Ramen, udon, and seasonal noodle specials.</li>
+    </ul>
+
+    </main>
+
+    <p id="footer-text">
+      © 2026 CampusBites. Helping students find the best bites on campus.
+    </p>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('dark-mode-toggle');
+      if (!toggle) return;
+      const apply = (on) => document.body.classList.toggle('dark', on);
+      const saved = localStorage.getItem('darkMode');
+      const initial = saved === 'true';
+      toggle.checked = initial;
+      apply(initial);
+      toggle.addEventListener('change', () => {
+        apply(toggle.checked);
+        localStorage.setItem('darkMode', toggle.checked);
+      });
+    })();
+  </script>
+
+  
+</body>
+</html>
